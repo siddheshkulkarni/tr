@@ -9,6 +9,8 @@
         $state.transitionTo('home');
       } else {
         $scope.error = "Incorrect username/password !";
+        $state.transitionTo('login');
+        
       }   
     };
     

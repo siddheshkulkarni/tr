@@ -1,6 +1,11 @@
 app.controller('HomeController', function($scope, $stateParams, $state,$http, $q) {
-    
+	//sessionStorage.setItem("Name",'');
     $scope.userName = sessionStorage.getItem("Name");
+    
+    if(!$scope.userName){
+    	$state.transitionTo('login');
+    } 
+    
     var config = {
                 headers : {
                     'Content-Type': 'application/json'
