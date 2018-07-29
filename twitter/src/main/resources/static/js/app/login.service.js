@@ -3,19 +3,32 @@ app.service('LoginService', function($q, $http) {
     var login = function(username,password) {
 
             var deferred = $q.defer();
+    
+            var config = {
+                    headers : {
+                        'Content-Type': 'application/json'
+                    }
+                }        
+            
+            var user = {
+              'userName': username,
+              'password': password
+            }
 
+            /*
             var loginService = {
                 method : 'GET',
-                url: "http://localhost:8090/authentication"
-            };
+                url: "http://localhost:8080/authentication"
+            }; */
+            
 
-            $http(loginService)
+            $http.post('http://localhost:8080/authentication',  user, config)
                 .then(function successCallback(response) {
                     userInfo = response.data;
                     
                     //login = username === response.data.username && password === response.data.password;
                     login = response.data.valid;
-                    
+                    console.log("valid "+login);
                     if(login){
                       sessionStorage.setItem("Name",username);
                       deferred.resolve(login);

@@ -17,7 +17,7 @@ public class Authentication {
   IsValid isValid;
 
   
-  @GetMapping("/authentication")
+  @PostMapping("/authentication")
   public IsValid authenticate(@RequestBody User user) {
     if (user.getUserName()!= null && user.getPassword() != null) {
       isValid.setValid(true);	
