@@ -13,7 +13,7 @@ Request
 
 Response
 {
-  “isValid” : boolean
+  “isValid” : true
 }
 
 Response status code
@@ -25,15 +25,15 @@ Response status code
 Method = POST
 Request
 {
-  “message” : “ ”,
+  “message” : “ a”,
   “Id” : null,
   “postedBy” : “userId”
 }
 
 Response
 {
-  “message” : “ ”,
-  “Id” : null,
+  “message” : “a ”,
+  “Id” : 2,
   “postedBy” : “userId”
 }
 
