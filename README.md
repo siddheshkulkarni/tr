@@ -20,6 +20,8 @@ Response status code
 200 ok
 
 
+
+
 2) http://{host}/post 
 
 Method = POST
