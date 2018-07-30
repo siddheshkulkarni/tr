@@ -1,3 +1,10 @@
+
+Url to access application: http://localhost:8080/index.html#!/login (make sure application is running in eclipse before hitting this url in browser)
+Use user sam, password is sam for login purpose
+Database is available at http://localhost:8080/h2-console (jdbc url should be jdbc:h2:mem:testdb. click connect). Run queries to see data
+
+
+
 Api design for twitter app website
 
  host = localhost:8080 
