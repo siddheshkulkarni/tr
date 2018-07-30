@@ -22,7 +22,7 @@
           controller : 'LoginController'
         })
         .state('home', {
-          url : '/home',
+          url : '/home/:userName',
           templateUrl : './views/home.html',
           controller : 'HomeController'
         });

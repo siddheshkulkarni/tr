@@ -1,10 +1,8 @@
 app.controller('HomeController', function($scope, $stateParams, $state,$http, $q) {
 	//sessionStorage.setItem("Name",'');
-    $scope.userName = sessionStorage.getItem("Name");
+    $scope.userName = $stateParams.userName;
     
-    if(!$scope.userName){
-    	$state.transitionTo('login');
-    } 
+    
     
     var config = {
                 headers : {
@@ -48,9 +46,5 @@ app.controller('HomeController', function($scope, $stateParams, $state,$http, $q
               });
             
           }
-    
-    
-
-    
    
   });

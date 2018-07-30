@@ -9,13 +9,6 @@
             return $http(serviceUrl)
     };
     
-    
-    
-    
-    
-    
-    
-    
     return {
       getUserInfo : getUserInfo
     }

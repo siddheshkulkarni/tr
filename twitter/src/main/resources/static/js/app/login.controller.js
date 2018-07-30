@@ -8,8 +8,9 @@
         $scope.password = '';
         $state.transitionTo('home');
       } else {
+    	$state.transitionTo('login');     
         $scope.error = "Incorrect username/password !";
-        $state.transitionTo('login');
+      
         
       }   
     };

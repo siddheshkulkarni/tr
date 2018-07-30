@@ -30,12 +30,15 @@ app.service('LoginService', function($q, $http) {
                     login = response.data.valid;
                     console.log("valid "+login);
                     if(login){
-                      sessionStorage.setItem("Name",username);
+                      //sessionStorage.setItem("Name",username);
+                      $state.go('home', { userName: username});  
                       deferred.resolve(login);
                     }else{
+                      $state.transitionTo('login');   	
                       deferred.reject(login);
                     }
                 }, function errorCallback(response) {
+                	//$state.transitionTo('login');  
                     deferred.reject(login);
                 });
             return deferred.promise;

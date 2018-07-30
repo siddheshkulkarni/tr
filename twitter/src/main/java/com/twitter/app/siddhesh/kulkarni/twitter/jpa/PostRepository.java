@@ -13,8 +13,4 @@ import com.twitter.app.siddhesh.kulkarni.twitter.pojo.User;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Integer>{
 
-	//Optional<User> findByUsername(String username);
-	//@Query("SELECT userId FROM user u where u.username = :username AND u.password = :password")
-    //public Optional<User> findByUsernameAndPassword(@Param("username") String username, 
-                                                   // @Param("password") String password);
 }
