@@ -7,13 +7,17 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
 public class User {
   String userName;
   String password;
   @Id
   @GeneratedValue
   Integer userId;
+  
+  public User() {
+    userName = null;
+    password = null;
+  }
   
   public String getUserName() {
 	return userName;
